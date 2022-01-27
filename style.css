@@ -1,156 +1,187 @@
-* {
-    margin: 0;
-    padding: 0;
+@font-face {
+    font-family: font;
+    src: url('./fonts/Arimo-Medium.ttf');
+}
+:root {
+    --color1: rgba(23, 23, 24, 0.835);
+    --color2: rgba(255, 143, 14, 0.767);
+}
+
+*,
+*::before,
+*::after {
+    margin: 0px;
+    padding: 0px;
     box-sizing: border-box;
-}
-
-html {
     font-size: 16px;
+    font-family: 'Arimo', sans-serif;
+    
 }
-
-body {
-    font-family: 'sans serif', 'Courier New', Courier, monospace;
-}
-
+/* les arrieres plan */
 header {
-    position: absolute;
-    width: 100%;
-    height: 8vh;
-    top: 0;
-    left: 0;
-    background: rgba(0, 0, 0, 0.85);
-    color: white;
-    padding: 0 2rem;
-}
-nav {
-    width: 100%;
-    height: 100%;
-    display: flex;
-    justify-content:space-between;
-    align-items: center;
-}
+    margin:0;
+    height: 100vh;
+    width: auto;
+    background: url('/assets/images/background0.png') no-repeat center center fixed;
+    background-size: cover;
+/* background: repeating-linear-gradient(to bottom right,rgba(128,161,235,92)5%,  rgba(20,16,8,20)15%, rgba(235,232,101,92)2%, rgba(20,16,8,20)20%) no-repeat fixed; */
 
-.logo {
-    font-size: 2rem;
-}
 
-.toggle {
-    display: none;
 }
-.menu {
+ .presentation {
+    background: linear-gradient(to bottom right, rgba(128,161,235,0.7)5%,rgba(245, 241, 5, 0.753)30%, rgba(20,16,8,0.7)70%);
+}
+/*
+.map {
+    background: repeating-linear-gradient(to left bottom, rgba(245, 241, 5, 0.808)12.5%, rgba(0, 0, 0, 0.918)15%, rgba(0, 0, 0, 0.918)15%, rgba(128, 161, 235, 0.7)20%);
+} */
+img {
+    size: 0.2rem;  
+}
+/* menu navigation */
+
+header nav {
+    padding: 10px 0 0 10px;
     display: flex;
+    flex-wrap: wrap;
     justify-content: space-between;
     align-items: center;
-    list-style: none;
-    width:550px;
-}
 
-.menu li a {
+}
+   /* header nav h4 {
+    margin:0 0 0 5px;
+    background: rgba(255, 239, 9, 0.678);
+    border: 1px solid white;
+    border-radius: 50%;
+    padding: 3px 3px;
     display: flex;
-    color: #fff;
-    text-decoration: none;
+    align-items: center;
+    justify-content: center;
+    
+} */
+
+/* logo */
+
+.logo {
+    width: 30px;
+    height: auto;
+    cursor: pointer;
+    user-select: none;
 }
 
-/* .submenu {
-    font-size: 2rem;
-    border: 0;
-    background-color: rgba(128, 128, 128, 0.85);
-    padding: 0.5rem 1rem;
+header nav .right {
+    display: flex;
+    align-items: center;
+    user-select: none;
+}
+header nav .right li {
+    margin:0 1rem 0 0;
+    list-style: none;
+    
+
+}
+
+.right a {
+    background: rgba(255, 143, 14, 0.767);
+    width: 5rem;
+    height: 1.5rem;
+    font-size: 0.5rem;
+    display: flex;
+    color: black;
+    align-items: center;
+   justify-content: center;
+   overflow: hidden;
+   border: 2px solid rgb(0, 1, 7);
+   font-weight: bold;
+    border-radius: 2em;
+    cursor: pointer;
+    text-transform: uppercase;
+    text-decoration: none;
+    transition: 0.5s;
+}
+
+/* menu en action */ 
+
+.right a:hover {
+    background: rgba(23, 23, 24, 0.835);
+    border: 2px solid rgba(253, 123, 17, 0.678);
+    border-radius: 2rem; 
+    color: rgba(253, 123, 17, 0.678);
+    font-size: 0.6rem;
+    font-weight: bolder;
+    cursor: pointer;
+}
+
+/* page principale */
+header section {
+    display: flex;
+    justify-content: center;
+}
+.PagePrincipale {
+   background: linear-gradient(to bottom right, rgba(245, 35, 35, 0.2),rgba(245, 241, 5, 0.753)30%, rgba(20,16,8,0.7)70%); 
+    border-radius: 2rem;
+    padding: 0;
+    margin: 20px 5px 20px 5px;
+    width: calc(100% - 50px);
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    overflow: hidden; 
+}
+
+
+  #sebaHead {
+     display: flex;
+     flex-direction: column;
+     justify-content: space-evenly;
+     text-align: center; 
+     padding: 5%;
+  }
+  #sebaHead h1,
+  #sebaHead h3 {
+      margin: 5px;
+  }
+.Pimg img {
     
     border-radius: 50%;
-    box-shadow: 2px 2px 1px 3px rgba(255, 255, 255, 0.65);
+    padding: 0;
+}
+
+/**** buttom buy ****/
+ header .buy {
+    user-select: none;
+    padding: 15% 7%;
+    background: rgba(17, 8, 0, 0.808);
+    border: 2px solid rgba(180, 81, 0, 0.993);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 4rem;
+    height: 0.7rem;
+    font-size: 0.5rem;
+    border-radius: 25px;
+    text-decoration: none;
+    color: rgba(180, 81, 0, 0.993);
+    font-weight: bold;
+    text-transform: uppercase;
+    transition: 0.5s;
     
-} */
-
-
-
-/* video background */
-/*.bloc {
-    position: relative;
-    height: 100vh;
-    width: 100%;
-    overflow: hidden;
 }
-.bloc video {
-    position: absolute;
-    min-width: 100%;
-    min-height: 100%;
-    top: 50%;
-    left: 50%;
-    z-index: -100;
-    transform: translate(-50%, -45%);
+header .buy:hover {
+    background: rgba(180, 81, 0, 0.993);
+    border: 3px solid var(--color1);
+    color: black;
+    font-size: 0.6rem;
+    font-weight: bold;
+} 
 
-}
 
-.bloc::before {
-    position: absolute;
-    content: "";
-    width: 100%;
-    height: 100%;
-    z-index: -99;
-    background-color: rgba(0, 0, 0, 0.3);
 
-} */
+/******************* page principale *********************/
 
-/* second methode background image */
-
-.VideoSeba {
-    height: 100vh;
-    background: url('/images/sebaM.jpg');
-    background-repeat: no-repeat;
-    background-size: cover;
-    background-position: center;
-}
-
-@media all and (max-width: 991px) {
-    .header {
-        background: transparent;
-    }
-    .toggle {
-        display: block;
-        font-size: 2rem;
-        cursor: pointer;
-        position: relative;
-        z-index: 20;
-    }
-    .logo {
-        position: relative;
-        z-index: 20;
-    }
-    .toggle .ouvrir {
-        display: block;
-    }
-    .toggle .fermer {
+/* responcive page */
+@media screen and (max-width: 350px){
+    header nav .right li {
         display: none;
     }
-    .open .ouvrir {
-        display: none;
-    }
-    .open .fermer {
-        display: block;
-    }
-    .menu {
-        position: absolute;
-        top: 0;
-        left: 0;
-        width: 100%;
-        height: 100vh;
-        background: #000;
-        flex-direction: column;
-        padding: 2rem;
-        justify-content: space-around;
-        transform: translateX(-100%);
-        transition: transform 5s;
-    }
-    .menu li a {
-        font-size: 2rem;
-    }
-    .open .menu {
-        transform: translateX(0);
-    }
 }
-
-
-
-
-
